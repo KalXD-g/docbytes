@@ -19,54 +19,103 @@ nav{
     padding:2.5rem 2rem;
     display:flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #logo{
     display:flex;
-    gap:.25rem;
-    font-size:xx-large;
-}
-
-/* Hamburger */
-
-#menu-hamburger{
-    background-color:transparent;
-    border:none;
-    display: flex;
-    flex-direction:column;
+    align-items: center;
     gap:.75rem;
+    font-size:2.5rem;
+    font-weight:bolder;
 }
 
-.menu-bars{
-    background-color:white;
-    height:.4vmin;
-    width:4.5vmin;
-    border-radius:.25vmin;
-}
-
-#menu-hamburger:hover{
-    background-color: blue;
-}
-
-
-#menu-drop-down{
-    right:1rem;
-    top:10rem;
-    position:absolute;
-    background-color:#202020;
-    border-radius:1rem;
-    padding:2.25rem 2.5rem;
-    height:35vmin;
-    width:35vmin;
+#logo-img{
+    height:45px;
+    aspect-ratio: 1/1;
 }
 
 #signup-login{
-    display:flex;
+    display: none;
+}
+
+/* Menu bar */
+
+#profile{
+    display: none;
+}
+
+#profile img{
+    height:50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-position: center;
+    background-color: white;
+}
+
+#menu-holder{
+    display: none;
+    right:1rem;
+    top:6rem;
+    position:absolute;
+    padding-top:4rem;
+}
+
+.menu{
+    background-color:#202020;
+    border-radius:1rem;
+    padding:2.25rem 2.5rem;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.menu:hover,.menu-drop-down{
+    display: flex;
+}
+
+.drop-down-item{
+    position: relative;
+    text-align: center;
+    padding: .75rem;
+    width: 100%;
+    text-decoration:none;
+    color:white;
+    font-size:1.25rem;
+    transition: all 1s linear;
+}
+
+.drop-down-item::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:10%;
+    height:2.5px;
+    width:0px;
+    transition: all 250ms linear;
+}
+
+.drop-down-item:hover::after{
+    width:80%;
+    background-color: white;
+}
+
+/* .drop-down-item:hover{
+} */
+
+#drop-down-contact-support{
+    font-size:10px;
+    color:#949090;
+}
+
+#signup-login{
+    /* display:flex; */
     justify-content: space-between;
+    gap:2.5rem;
 }
 
 .signup-login{
-    background-color:black;
+    background-color:#121212;
     color:white;
     padding:1rem 2rem;
     border-radius:1rem;
@@ -80,5 +129,4 @@ nav{
     background-color:white;
     color:black;
     transform: scale(1.05);
-    box-shadow: 0px 3px 19px black;
 }
