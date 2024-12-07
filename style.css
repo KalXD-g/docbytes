@@ -1,0 +1,84 @@
+*{
+    padding:0;
+    margin:0;
+    font-family:monospace;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#121212;
+    color:white;
+}
+
+/* Nav Bar */
+
+nav{
+    position:fixed;
+    width:100%;
+    background-color: black;
+    padding:2.5rem 2rem;
+    display:flex;
+    justify-content: space-between;
+}
+
+#logo{
+    display:flex;
+    gap:.25rem;
+    font-size:xx-large;
+}
+
+/* Hamburger */
+
+#menu-hamburger{
+    background-color:transparent;
+    border:none;
+    display: flex;
+    flex-direction:column;
+    gap:.75rem;
+}
+
+.menu-bars{
+    background-color:white;
+    height:.4vmin;
+    width:4.5vmin;
+    border-radius:.25vmin;
+}
+
+#menu-hamburger:hover{
+    background-color: blue;
+}
+
+
+#menu-drop-down{
+    right:1rem;
+    top:10rem;
+    position:absolute;
+    background-color:#202020;
+    border-radius:1rem;
+    padding:2.25rem 2.5rem;
+    height:35vmin;
+    width:35vmin;
+}
+
+#signup-login{
+    display:flex;
+    justify-content: space-between;
+}
+
+.signup-login{
+    background-color:black;
+    color:white;
+    padding:1rem 2rem;
+    border-radius:1rem;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:bold;
+    transition:all 250ms linear;
+}
+
+.signup-login:hover{
+    background-color:white;
+    color:black;
+    transform: scale(1.05);
+    box-shadow: 0px 3px 19px black;
+}
