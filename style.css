@@ -13,13 +13,25 @@ body{
 /* Nav Bar */
 
 nav{
-    position:fixed;
+    position:sticky;
     width:100%;
     background-color: black;
     padding:1rem 2rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    animation: nav-slider 750ms linear;
+}
+
+@keyframes nav-slider{
+    from{
+        transform: translateX(100dvw);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 #logo{
@@ -29,6 +41,7 @@ nav{
     font-size:2.5rem;
     font-weight:bolder;
     padding-right:1rem;
+    cursor: default;
 }
 
 #logo-img{
@@ -49,7 +62,6 @@ nav{
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* max-width:50%; */
 }
 
 #trending::-webkit-scrollbar {
@@ -81,6 +93,11 @@ nav{
     padding:1rem;
     background-color:#121212;
     border-radius:.75rem;
+    cursor: pointer;
+}
+
+#strike{
+    cursor: pointer;
 }
 
 /* Menu bar */
@@ -169,4 +186,74 @@ nav{
     background-color:white;
     color:black;
     transform: scale(1.05);
+}
+
+/* Main */
+
+main{
+    margin-top:4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    gap:5vmin;
+    height:80dvh;
+}
+
+#starting-guide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    gap:5vmin;
+    opacity: 0;
+    animation: startup 500ms linear 750ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes startup{
+    from{
+        transform: translateY(20rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#starting-text{
+    font-size:8vmin;
+    font-weight:bold;
+}
+
+#starting-sub-text{
+    font-size:3vmin;
+    font-weight:bold;
+}
+
+#topics{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    place-items: center;
+    gap:5vh;
+    padding-inline:2.5rem;
+    opacity: 0;
+    animation: startup 500ms linear 750ms;
+    animation-fill-mode: forwards;
+}
+
+.topic-cards{
+    height:25vh;
+    width:20vw;
+    background-color: #202020;
+    border-radius:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size:larger;
+}
+
+.lang-icon{
+    font-size:6.5vmin;
 }
