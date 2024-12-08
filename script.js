@@ -10,10 +10,12 @@ if(!sessionStorage.getItem('hasAccount')){
     document.getElementById('profile').style.display = "block";
     showMenu()
     document.getElementById('signup-login').style.display = "none";
+    document.getElementById('status').style.display = "flex";
 } else {
     document.getElementById('signup-login').style.display = "flex";
     document.getElementById('menu-drop-down').style.display = "none";
     document.getElementById('profile').style.display = "none";
+    document.getElementById('status').style.display = "none";
 }
 
 function showMenu() {
