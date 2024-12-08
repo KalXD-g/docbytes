@@ -120,7 +120,6 @@ nav{
 
 .drop-down-item{
     position: relative;
-    text-align: center;
     padding: .75rem;
     width: 100%;
     text-decoration:none;
@@ -133,7 +132,7 @@ nav{
     content:'';
     position:absolute;
     bottom:0;
-    left:10%;
+    left:0%;
     height:2.5px;
     width:0px;
     transition: all 250ms linear;
