@@ -93,5 +93,4 @@ Array.from(document.getElementsByClassName('bookmarks')).forEach(card=>{
         card.classList.toggle('fa-regular')
         card.classList.toggle('fa-solid')
     })
-
 })

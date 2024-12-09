@@ -294,11 +294,6 @@ main{
     filter: grayscale(0);
 }
 
-#non-icon-c, #non-icon-cpp{
-    font-weight: bolder;
-    font-family:sans-serif;
-}
-
 .bookmarks{
     position: absolute;
     right:2vmin;
