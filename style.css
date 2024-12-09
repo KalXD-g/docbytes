@@ -16,7 +16,9 @@ nav{
     position:sticky;
     width:100%;
     background-color: black;
-    padding:1rem 2rem;
+    padding: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -39,6 +41,11 @@ nav{
 
 #signup-login{
     display: none;
+}
+
+#signup-login * {
+    height: 40px;
+    padding-top: 10px;
 }
 
 /* Trending section */
