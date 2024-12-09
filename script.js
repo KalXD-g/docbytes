@@ -13,10 +13,11 @@ if(!sessionStorage.getItem('hasAccount')){
     document.getElementById('status').style.display = "flex";
 } else {
     document.getElementById('signup-login').style.display = "flex";
-    document.getElementById('menu-drop-down').style.display = "none";
     document.getElementById('profile').style.display = "none";
     document.getElementById('status').style.display = "none";
 }
+
+// Menu drop down
 
 function showMenu() {
     let menu = Array.from(document.getElementsByClassName('menu'))[0];
@@ -40,3 +41,57 @@ function showMenu() {
         menuHolder.style.display = "none";
     })
 }
+
+// Nav bar and home page courses
+
+const languagesList = [
+    "Python",
+    "Javascript",
+    "Java",
+    "Golang",
+    "Rust",
+    "SQL",
+    "Swift",
+    "Dart",
+    "C++"
+]
+
+const languagesIcon = [
+    "svg/python.svg",
+    "svg/js.svg",
+    "svg/java.svg",
+    "svg/go.svg",
+    "svg/rust.svg",
+    "svg/sql.svg",
+    "svg/swift.svg",
+    "svg/dart.svg",
+    "svg/cpp.svg"
+]
+
+for(let i=0; i<languagesList.length; i++){
+    let div = document.createElement('div')
+    div.classList.add('topic-cards')
+    div.id = `topic-card-${i+1}`
+    div.innerHTML = `
+        <i class="fa-regular fa-bookmark bookmarks"></i>
+        <img class="lang-icon" src="${languagesIcon[i]}" id="${languagesList[i]}">
+        ${languagesList[i]}
+    `
+    document.getElementById('topics').appendChild(div);
+}
+
+for(let i=0; i<languagesList.length; i++){
+    let div = document.createElement('div')
+    div.classList.add('trending-topics')
+    div.id = `trending-topic${i+1}`
+    div.innerText = `${languagesList[i]}`
+    document.getElementById('trending').appendChild(div);
+}
+
+Array.from(document.getElementsByClassName('bookmarks')).forEach(card=>{
+    card.addEventListener('click',()=>{
+        card.classList.toggle('fa-regular')
+        card.classList.toggle('fa-solid')
+    })
+
+})

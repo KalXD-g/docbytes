@@ -215,8 +215,10 @@ main{
 }
 
 .topic-cards{
+    position: relative;
     height:25vh;
     width:20vw;
+    min-width:200px;
     background-color: #202020;
     border-radius:1rem;
     display: flex;
@@ -225,8 +227,13 @@ main{
     flex-wrap: wrap;
     font-size:x-large;
     opacity: 0;
+    transition: scale 250ms linear;
     animation: fadeoff 250ms ease-in;
     animation-fill-mode: forwards;
+}
+
+.topic-cards:hover{
+    scale:1.15;
 }
 
 #topic-card-1{
@@ -261,6 +268,14 @@ main{
     animation-delay: 1200ms;
 }
 
+#topic-card-9{
+    animation-delay: 1350ms;
+}
+
+#topic-card-10{
+    animation-delay: 1500ms;
+}
+
 @keyframes fadeoff{
     from{
         opacity: 0;
@@ -271,5 +286,22 @@ main{
 }
 
 .lang-icon{
-    font-size:7.5vmin;
+    height:8vmin;
+    filter: grayscale(1);
+}
+
+.topic-cards:hover .lang-icon{
+    filter: grayscale(0);
+}
+
+#non-icon-c, #non-icon-cpp{
+    font-weight: bolder;
+    font-family:sans-serif;
+}
+
+.bookmarks{
+    position: absolute;
+    right:2vmin;
+    top:2.5vmin;
+    cursor: pointer;
 }
