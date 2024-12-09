@@ -20,18 +20,6 @@ nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    animation: nav-slider 750ms linear;
-}
-
-@keyframes nav-slider{
-    from{
-        transform: translateX(100dvw);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 #logo{
@@ -205,20 +193,6 @@ main{
     justify-content: center;
     flex-direction:column;
     gap:5vmin;
-    opacity: 0;
-    animation: startup 500ms linear 750ms;
-    animation-fill-mode: forwards;
-}
-
-@keyframes startup{
-    from{
-        transform: translateY(20rem);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 #starting-text{
@@ -232,14 +206,12 @@ main{
 }
 
 #topics{
-    display: grid;
-    grid-template-columns:repeat(4,1fr);
-    place-items: center;
-    gap:5vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:2.5vh;
     padding-inline:2.5rem;
-    opacity: 0;
-    animation: startup 500ms linear 750ms;
-    animation-fill-mode: forwards;
 }
 
 .topic-cards{
@@ -251,9 +223,53 @@ main{
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    font-size:larger;
+    font-size:x-large;
+    opacity: 0;
+    animation: fadeoff 250ms ease-in;
+    animation-fill-mode: forwards;
+}
+
+#topic-card-1{
+    animation-delay: 150ms;
+}
+
+#topic-card-2{
+    animation-delay: 300ms;
+}
+
+#topic-card-3{
+    animation-delay: 450ms;
+}
+
+#topic-card-4{
+    animation-delay: 600ms;
+}
+
+#topic-card-5{
+    animation-delay: 750ms;
+}
+
+#topic-card-6{
+    animation-delay: 900ms;
+}
+
+#topic-card-7{
+    animation-delay: 1050ms;
+}
+
+#topic-card-8{
+    animation-delay: 1200ms;
+}
+
+@keyframes fadeoff{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .lang-icon{
-    font-size:6.5vmin;
+    font-size:7.5vmin;
 }
