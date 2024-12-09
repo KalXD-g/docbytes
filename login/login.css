@@ -2,33 +2,33 @@ body {
     background-color: #121212;
     color: white;
     font-family: monospace;
+    width:100dvw;
 }
 
-.dotted-list {
-    list-style-type: none;
-    padding-left: 20px;
-    position: relative;
-    margin-left: 145px;
-    margin-top: -90px;
+#logo-title, #log{
+    font-size: 7.5vmin;
 }
 
-.dotted-list li {
-    position: relative;
-    margin: 18px 0;
-    padding-left: 20px;
+#login-page-content{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#login-page-text{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    flex-direction:column;
+    gap:1.5rem;
+}
+
+li {
     font-size: 30px;
-}
-
-.dotted-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    background-color: white;
-    border-radius: 50%;
 }
 
 #logo {
@@ -41,10 +41,6 @@ body {
     cursor: default;
 }
 
-#logo-title {
-    font-size: 100px;
-}
-
 #logo-img {
     height: 150px;
 }
@@ -55,16 +51,14 @@ body {
     width: 300px;
 }
 
-#username-mailid, #password {
+input {
     font-family: monospace;
     margin-bottom: 25px;
     color: white;
     background-color: #202020;
-    height: 35px;
-    font-size: 15px;
+    font-size: 2vmin;
     border-radius: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding:1rem 1.5rem;
     border: solid 1px #202020;
 }
 
@@ -88,15 +82,14 @@ body {
     margin-top: 50px;
 }
 
-#log {
+/* #log {
     font-size: 80px;
-}
+} */
 
 #cancel-login-button * {
-    border-radius: 20px;
+    border-radius: 25px;
     border: solid 1px black;
-    height: 40px;
-    width: 100px;
+    padding:1rem 1.5rem;
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 10px;
