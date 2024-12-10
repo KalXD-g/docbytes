@@ -13,13 +13,16 @@ body{
 /* Nav Bar */
 
 nav{
-    position:sticky;
+    position:fixed;
+    top:0;
+    height:75px;
     width:100%;
     background-color: black;
     padding:5px 8px;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    z-index:1;
 }
 
 #logo{
@@ -184,7 +187,7 @@ nav{
 /* Main */
 
 main{
-    margin-top:4rem;
+    margin-top:7rem;
     display: flex;
     justify-content: space-between;
     flex-direction:column;
@@ -201,12 +204,12 @@ main{
 }
 
 #starting-text{
-    font-size:8vmin;
+    font-size:12vmin;
     font-weight:bold;
 }
 
 #starting-sub-text{
-    font-size:3vmin;
+    font-size:3.5vmin;
     font-weight:bold;
 }
 
@@ -241,46 +244,6 @@ main{
     scale:1.15;
 }
 
-#topic-card-1{
-    animation-delay: 150ms;
-}
-
-#topic-card-2{
-    animation-delay: 300ms;
-}
-
-#topic-card-3{
-    animation-delay: 450ms;
-}
-
-#topic-card-4{
-    animation-delay: 600ms;
-}
-
-#topic-card-5{
-    animation-delay: 750ms;
-}
-
-#topic-card-6{
-    animation-delay: 900ms;
-}
-
-#topic-card-7{
-    animation-delay: 1050ms;
-}
-
-#topic-card-8{
-    animation-delay: 1200ms;
-}
-
-#topic-card-9{
-    animation-delay: 1350ms;
-}
-
-#topic-card-10{
-    animation-delay: 1500ms;
-}
-
 @keyframes fadeoff{
     from{
         opacity: 0;
@@ -291,8 +254,12 @@ main{
 }
 
 .lang-icon{
-    height:8vmin;
+    height:9.75vmin;
     filter: grayscale(1);
+}
+
+#Javascript{
+    border-radius:2rem;
 }
 
 .topic-cards:hover .lang-icon{
@@ -304,4 +271,44 @@ main{
     right:2vmin;
     top:2.5vmin;
     cursor: pointer;
+}
+
+/* Docs */
+
+.doc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    gap:1rem;
+    padding-inline:8vw;
+}
+
+.doc-title{
+    font-size:5vmin;
+    font-weight:bold;
+}
+
+.doc p{
+    padding-left:2vw;
+    font-size:x-large;
+    letter-spacing: .5px;
+}
+
+.doc-theory{
+    display: flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+/* Code space */
+
+.doc-code{
+    background-color: #202020;
+    padding:2rem 1.5rem;
+    border-radius:.75rem;
+    font-size:larger;
+    margin-block:2.5rem;
+    max-width:1024px;
+    width:80%;
 }
