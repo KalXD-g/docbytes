@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | DocBytes</title>
     <link rel="stylesheet" href="signup.css">
+    <script src="signup.js" defer></script>
 </head>
 <body>
     <div id="signup-page-content">
         <div id="signup-page-text">
             <div id="logo">
-                <img src="../svg/logo.svg" id="logo-img" />
+                <img src="../svg/logo.svg" id="logo-img" alt="DocBytes Logo" />
                 <p id="logo-title">DocBytes</p>
             </div>
             <ul class="dotted-list">
@@ -26,7 +27,10 @@
             <div id="signup-password-box">
                 <input type="text" id="username" placeholder="Username">
                 <input type="text" id="mailid" placeholder="Mail ID">
-                <input type="password" id="password" placeholder="Password">
+                <div id="password-container">
+                    <input type="password" id="password" placeholder="Password">
+                    <img src="../svg/hidepswrd.svg" id="toggle-password" alt="Toggle Password">
+                </div>
             </div>
             <div id="cancel-signup-button">
                 <button id="cancel-button">Cancel</button>

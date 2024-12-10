@@ -5,7 +5,7 @@ body {
 }
 
 .dotted-list {
-    list-style-type: none; /* Remove default bullets */
+    list-style-type: none;
     padding-left: 20px;
     position: relative;
     margin-left: 145px;
@@ -14,7 +14,7 @@ body {
 
 .dotted-list li {
     position: relative;
-    margin: 18px 0; /* Add spacing between items */
+    margin: 18px 0;
     padding-left: 20px;
     font-size: 30px;
 }
@@ -27,16 +27,16 @@ body {
     transform: translateY(-50%);
     width: 8px;
     height: 8px;
-    background-color: white; /* Black dot */
-    border-radius: 50%; /* Make it a circle */
+    background-color: white;
+    border-radius: 50%;
 }
 
-#logo{
-    display:flex;
+#logo {
+    display: flex;
     align-items: center;
-    gap:.75rem;
-    font-size:2.5rem;
-    font-weight:bolder;
+    gap: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
     padding-right: 200px;
     cursor: default;
 }
@@ -55,7 +55,7 @@ body {
     width: 300px;
 }
 
-#username, #password, #mailid {
+#password, #username, #mailid {
     font-family: monospace;
     margin-bottom: 25px;
     color: white;
@@ -63,9 +63,26 @@ body {
     height: 35px;
     font-size: 15px;
     border-radius: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 45px 0 15px;
     border: solid 1px #202020;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#password-container {
+    position: relative;
+    width: 100%;
+}
+
+#toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    padding-bottom: 23px;
 }
 
 #signup-button, #cancel-button {
@@ -93,7 +110,7 @@ body {
     font-size: 80px;
 }
 
-#cancel-signup-button *{
+#cancel-signup-button * {
     border-radius: 20px;
     border: solid 1px black;
     height: 40px;
@@ -111,6 +128,6 @@ body {
     background-color: white;
     color: black;
     font-weight: bolder;
-    box-shadow: 3px 6px 12px rgba(0,0,0,0.2);
-    transform: scale(1.05)
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
