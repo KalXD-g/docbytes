@@ -79,7 +79,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 
 #signup-page-content {
