@@ -53,7 +53,10 @@ const languagesList = [
     "SQL",
     "Swift",
     "Dart",
-    "C++"
+    "C",
+    "C++",
+    "Git",
+    "Github"
 ]
 
 const languagesIcon = [
@@ -65,8 +68,13 @@ const languagesIcon = [
     "svg/sql.svg",
     "svg/swift.svg",
     "svg/dart.svg",
-    "svg/cpp.svg"
+    "svg/c.svg",
+    "svg/cpp.svg",
+    "svg/git.svg",
+    "svg/github.svg"
 ]
+
+let delaySeconds = 150;
 
 for(let i=0; i<languagesList.length; i++){
     let div = document.createElement('div')
@@ -77,6 +85,8 @@ for(let i=0; i<languagesList.length; i++){
         <img class="lang-icon" src="${languagesIcon[i]}" id="${languagesList[i]}">
         ${languagesList[i]}
     `
+    div.style.animationDelay = `${delaySeconds}ms`;
+    delaySeconds += 150;
     document.getElementById('topics').appendChild(div);
 }
 
@@ -94,3 +104,6 @@ Array.from(document.getElementsByClassName('bookmarks')).forEach(card=>{
         card.classList.toggle('fa-solid')
     })
 })
+
+// Documentation section
+
