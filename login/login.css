@@ -131,3 +131,9 @@ body {
     box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  #logo, .dotted-list {
+    display: none;
+  }
+}
