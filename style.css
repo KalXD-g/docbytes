@@ -195,6 +195,12 @@ main{
     height:80dvh;
 }
 
+#home-page{
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem;
+}
+
 #starting-guide{
     display: flex;
     align-items: center;
@@ -225,8 +231,9 @@ main{
 .topic-cards{
     position: relative;
     height:25vh;
-    width:20vw;
-    min-width:200px;
+    min-width:225px;
+    text-decoration: none;
+    color:white;
     background-color: #202020;
     border-radius:1rem;
     display: flex;
@@ -238,6 +245,16 @@ main{
     transition: scale 250ms linear;
     animation: fadeoff 250ms ease-in;
     animation-fill-mode: forwards;
+}
+
+@media (max-width:720px) {
+    .topic-cards{
+        flex-direction:column;
+    }
+
+    #trending{
+        display: none;
+    }
 }
 
 .topic-cards:hover{
@@ -304,11 +321,22 @@ main{
 /* Code space */
 
 .doc-code{
+    position:relative;
     background-color: #202020;
     padding:2rem 1.5rem;
     border-radius:.75rem;
     font-size:larger;
-    margin-block:2.5rem;
+    margin-block:3rem;
     max-width:1024px;
-    width:80%;
+    min-width:80%;
+}
+
+.code-lang{
+    position: absolute;
+    bottom:85%;
+    left:5%;
+    background-color: #202020;
+    padding:1rem 2rem;
+    border-radius: .5rem .5rem 0rem 0rem;
+    font-size: 1.25rem;
 }

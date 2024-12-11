@@ -14,8 +14,7 @@
             <img src="svg/logo.svg" id="logo-img" />
             <p id="logo-title">DocBytes</p>
         </div>
-        <div id="trending">
-        </div>
+        <div id="trending"></div>
         <div id="status">
             <div id="timer" title="Time spent in this website"><nobr>45Y 7M 24D</nobr></div>
             <div id="strike"><nobr><i class="fa-solid fa-fire"></i> 3M</nobr></div>
@@ -56,15 +55,17 @@
         </div>
     </nav>
     <main>
-        <div id="starting-guide">
-            <span id="starting-text">
-                Start here.
-            </span>
-            <span id="starting-sub-text">
-                Choose the topic you wanna learn from below
-            </span>
+        <div id="home-page">
+            <div id="starting-guide">
+                <span id="starting-text">
+                    Start here.
+                </span>
+                <span id="starting-sub-text">
+                    Choose the topic you wanna learn from below
+                </span>
+            </div>
+            <div id="topics"></div>
         </div>
-        <div id="topics"></div>
         <div id="doc-topics">
             <div class="doc" id="python-doc">
                 <div class="doc-theory">
@@ -101,6 +102,10 @@
                 <div class="doc-code">
                     <div class="code-lang">
                         Python
+                    </div>
+                    <div class="code-btns">
+                        <div class="code-run"></div>
+                        <div class="code-copy"></div>
                     </div>
                     <div class="code">
                         print("Hello World!\n")

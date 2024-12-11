@@ -77,9 +77,10 @@ const languagesIcon = [
 let delaySeconds = 150;
 
 for(let i=0; i<languagesList.length; i++){
-    let div = document.createElement('div')
+    let div = document.createElement('a')
     div.classList.add('topic-cards')
     div.id = `topic-card-${i+1}`
+    div.href=`#`;
     div.innerHTML = `
         <i class="fa-regular fa-bookmark bookmarks"></i>
         <img class="lang-icon" src="${languagesIcon[i]}" id="${languagesList[i]}">
